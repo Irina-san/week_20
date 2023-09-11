@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Swapi API Example</title>
+    <style>
+      section {
+        width: auto;
+        height: auto;
+      }
+      .request,
+      .answer {
+        width: auto;
+        height: 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      #entitySelect{
+        width: 200px;
+        height: 30px;
+      }
+      #entityId{
+        width: 200px;
+        height: 20px;
+      }
+      h1 {
+        font-size: 36px;
+        color: #b41e1e;
+        text-align: left;
+      }
+      button {
+        width: 120px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: #b41e1e;
+        color: white;
+        text-align: center;
+       
+      }
+      #result,
+      #error {
+        font-size: 24px;
+        color: #b41e1e;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Кого или что мы будем искать?</h1>
+    <section>
+      <div class="request">
+        <select id="entitySelect">
+          <option value="people">Людей</option>
+          <option value="films">Фильмы</option>
+          <option value="planets">Планеты</option>
+        </select>
+        <input type="number" id="entityId" min="1" max="10" />
+        <button id="searchBtn">Вперед!</button>
+      </div>
+      <div class="answer">
+        <div id="result"></div>
+        <div id="error"></div>
+      </div>
+    </section>
+    <script src="./20.js"></script>
+  </body>
+</html>
